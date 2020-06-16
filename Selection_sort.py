@@ -16,7 +16,7 @@ def selection_sort(list):
 
 
 if __name__ == "__main__":
-    unsorted_list = generat_random_list.create(9999)
+    unsorted_list = generat_random_list.create(99999)
     start = time.time()
     sortet_list = selection_sort(unsorted_list)
     end = time.time()
