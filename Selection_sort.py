@@ -6,8 +6,8 @@ def selection_sort(list):
     for index in range(len(list)):
         minimum_index = index
         for i in range(minimum_index + 1, len(list)):
-            if list[minimum_index].lower() > list[
-                i].lower():  # min indexmuss größer sein als i in list dann wird true zurück gegeben
+            if ord(list[minimum_index][0].lower()) > ord(list[
+                i][0].lower()):  # min indexmuss größer sein als i in list dann wird true zurück gegeben
                 minimum_index = i
         cache = list[index]
         list[index] = list[minimum_index]
@@ -17,7 +17,7 @@ def selection_sort(list):
 
 
 if __name__ == "__main__":
-    # unsorted_list = ["Haus", "brot", "Brot", "haus", "boot", "Boot", "hund", "Hund"]
+    #unsorted_list = ["Haus", "brot", "Brot", "haus", "boot", "Boot", "hund", "Hund"]
     unsorted_list = generat_random_list.create(9999)
     start = time.time()
     sortet_list = selection_sort(unsorted_list)
